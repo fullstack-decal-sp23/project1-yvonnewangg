@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Yvonne Wang">
+    <title>yvonne wang</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="section-one">
+        <div class="flex-dash">
+            <a class="dash" href="#work">projects</a>
+            <a class="dash" href="#contact">contact</a>
+        </div>
+
+        <h1>yvonne wang</h1> 
+
+        <header id="about">
+            <div class = "grid">
+                <div id = "leftabout">
+                    <h2>about me</h2>
+                    <h4>Hi! I'm currently a sophomore studying Computer Science and Public Health at UC Berkeley. I deeply care about using emerging technologies like Brain Computer Interface to transform the way we approach healthcare and ensure that marginalized communities are given voice.</h4>
+                </div>
+            </div>
+
+            <div class="flex-profile">
+                <img class="profile" src="profile.png" alt="a picture of me">
+            </div>
+
+        </header>   
+    </div> 
+
+    <div id="work">
+        <div id="workcontent">
+            <h2>projects</h2>
+            <div class="grid">
+                <div class="grid-items">
+                    <h3>BetaMax: Integrating Nanotechnology with Regenerative Medicine</h3>
+                    <p>Conducted research proposing the use of nanobots in delivering and releasing serotonin to targeted body sites where damaged peripheral nerves were present. Carried out an experiment demonstrating the nature of nerve regeneration on tadpoles using serotonin.</p>
+                </div>
+
+                <div class="grid-items">
+                    <h3>Find Your Way Home: Java</h3>
+                    <p>Designed and implemented a 2D tile-based engine that generates pseudo-random worlds. Features include controllable lighting in rooms, obstacles, and a door (the “goal”) leading to the user’s home. Functionalities include saving & loading, and HUD that displays the number of lives left and a tile’s description upon hovering over the tile.</p>
+                </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <h2>connect with me!</h2>
+        <div id = "contact-text">
+            <button id="contact-button">LinkedIn</button>
+            <h5>email: wangyvonne@berkeley.edu</h5>
+        </div>
+        <h3>stay in touch!</h3>
+        <h6>enter your email below to be added to my monthly newsletter.</h6>
+     
+        <form onsubmit="return register(this)">
+            <div>
+                <label>name:</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <div>
+                <input id="submit" type="submit">
+            </div>
+        </form>
+        
+        <script>
+            function register(form) {
+                form.action = "register.html";
+                alert(form.action);
+                return false;
+            }
+        </script> 
+        
+
+    </div>
+
+    <script type="text/javascript">
+        function openLinkedIn(){
+        window.open("https://www.linkedin.com/in/yvonne-wang-/");
+      }
+      document.getElementById("contact-button").onclick = openLinkedIn;
+    </script> 
+
+</body>
+</html>
